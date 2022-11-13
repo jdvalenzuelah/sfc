@@ -1,0 +1,3 @@
+
+class IncorrectHookFormat(Exception):
+    pass
