@@ -1,5 +1,5 @@
-from CommunicationBuffer import CommunicationBuffer
-from FanSpeedCurve import FanSpeedCurve
+from sfc.CommunicationBuffer import CommunicationBuffer
+from sfc.FanSpeedCurve import FanSpeedCurve
 import time
 import logging
 
