@@ -14,7 +14,7 @@ class ControlLoop:
         :param system: The communication buffer to get system info and set fan settings
         :param curve: The model used to get the fan speed during a control cycle
         :keyword samplingTime: sample time in seconds, default=1
-        :keyword cycleHook: Hook called during each control cycle. Must accept feedback, currentState, newState kwargs
+        :keyword cycleHook: Hook called during each control cycle. Must accept feedback, currentState, newState, time kwargs
         """
 
         self.system = system
@@ -58,7 +58,7 @@ class ControlLoop:
 
         if self.cycleHook:
             logging.debug('executing cycle hook')
-            self.cycleHook(feedback=feedback, currentState=currentState, newState=newState)
+            self.cycleHook(feedback=feedback, currentState=currentState, newState=newState, time=now)
 
     def start(self):
         """
