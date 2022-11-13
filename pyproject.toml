@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sfc"
+version = "0.0.1"
+authors = [
+    { name="Josue Valenzuela", email="val171001@uvg.edu.gt" },
+]
+description = "A small framework to implement control loop algorithms for server cooling fans control"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jdvalenzuelah/sfc"
+"Bug Tracker" = "https://github.com/jdvalenzuelah/sfc/issues"
