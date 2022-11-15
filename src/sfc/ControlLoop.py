@@ -36,6 +36,12 @@ class ControlLoop:
         # TODO: Check hook signature
         self.cycleHook = hook
 
+    def onCycle(self) -> callable:
+        def decorator(f):
+            self.setCycleHook(f)
+            return f
+        return decorator()
+
     def __control(self):
         """
         Control cycle, gets the system state and feedback and sets the new state based on the value returned by the
