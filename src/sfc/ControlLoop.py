@@ -40,7 +40,7 @@ class ControlLoop:
         def decorator(f):
             self.setCycleHook(f)
             return f
-        return decorator()
+        return decorator
 
     def __control(self):
         """
